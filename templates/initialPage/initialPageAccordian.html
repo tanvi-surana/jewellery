@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head lang="en">
+		<title>Aura</title>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href={% static "fontAwsome/font-awesome-4.3.0/css/font-awesome.min.css" %}>
+		<link rel="stylesheet" type="text/css" href={% static "bootstrap/bootstrap-3.3.5-dist/css/bootstrap.min.css" %}>
+		<!--<link rel="stylesheet" type="text/css" href={% static "initialPage/css/initialPageAccordian.css" %}>-->
+		<!--<link rel="stylesheet" type="text/css" href={% static "navbar/css/navbar.css" %}>-->
+		<link rel="stylesheet/less" type="text/css" href={% static "initialPage/css/initialPageAccordian.less" %}>
+		<link rel="stylesheet/less" type="text/css" href={% static "navbar/initialPageNavbar/css/initialPageNavbar.less" %}>
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<!--Accordian -->
+		<div class="viewPort">
+			<div class="superCard superCard1">
+				<div class="card card1">
+					<div class="back">
+						<i class="fa fa-angle-double-left"></i>
+					</div>
+				</div>
+				<div class="cardData">
+				
+				</div>
+			</div>
+			<div class="superCard superCard2">
+				<div class="card card2">
+					<div class="back">
+						<i class="fa fa-angle-double-left"></i>
+					</div>
+				</div>
+				<div class="cardData">
+
+				</div>
+			</div>
+			<div class="superCard superCard3">
+				<div class="card card3">
+					<div class="back">
+						<i class="fa fa-angle-double-left"></i>
+					</div>
+				</div>
+				<div class="cardData">
+
+				</div>
+			</div>
+			<div class="superCard superCard4">
+				<div class="card card4">
+					<div class="back">
+						<i class="fa fa-angle-double-left"></i>
+					</div>
+				</div>
+				<div class="cardData">
+
+				</div>
+			</div>
+			<div class="superCard superCard5">
+				<div class="card card5">
+					<div class="back">
+						<i class="fa fa-angle-double-left"></i>
+					</div>
+				</div>
+				<div class="cardData">
+					
+				</div>
+			</div>
+		</div>
+		
+		<!-- Navbar -->
+		<div class="container-fluid navBar">
+			<div class="nav">
+				<ul class="list-unstyled">
+					<li>
+						<a href="jwellery" class="jwellery">Jwellery</a>
+					</li>
+					<li>
+						<a href="solitaires" class="solitaires">Solitaires</a>
+					</li>
+					<li>
+						<a href="goldCoins" class="goldCoins">Gold Coins</a>
+					</li>
+					<li>
+						<a href="collections" class="collections">Collections</a>
+					</li>
+				</ul>
+			</div>
+			<div class="searchDock">
+				<div class="dock">
+					{% if user.is_anonymous %}
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-search"></i></a></li>
+							&nbsp;|&nbsp;
+							<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+							&nbsp;|&nbsp;
+							<li><a href="#">Sign In</a></li>
+							&nbsp;|&nbsp;
+							<li><a href="#">Register</a></li>
+						</ul>
+
+					{% else %}
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-search"></i></a></li>
+							&nbsp;|&nbsp;
+							<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+							&nbsp;|&nbsp;
+							<li><a href="#">Hi, {{request.username}}</a></li>
+							&nbsp;|&nbsp;
+							<li><a href="#">Log Out</a></li>
+						</ul>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="bottomRibbon"></div>
+		<script type="text/javascript" src={% static "jQuery/jquery-1.11.2.min.js" %}></script>
+		<script src={% static "less.js-master/dist/less.js" %} type="text/javascript"></script>
+		<script type="text/javaascript" src={% static "bootstrap/bootstrap-3.3.5-dist/js/bootstrap.min.js" %}></script>
+		<script type="text/javascript" src={% static "initialPage/js/initialPageAccordian.js"%}></script>
+	</body>
+</html>

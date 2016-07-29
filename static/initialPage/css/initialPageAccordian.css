@@ -1,0 +1,105 @@
+body{
+	margin: 0;
+	font-family: sans-serif;
+}
+div.viewPort{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+div.viewPort div.superCard{
+	width: 100%;
+	height: 85%;
+	position: absolute;
+}
+div.viewPort div.superCard1{
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+div.viewPort div.superCard2{
+	top: 0;
+	left: 20%;
+	z-index: 1;
+}
+div.viewPort div.superCard3{
+	top: 0;
+	left: 40%;
+	z-index: 2;
+}
+div.viewPort div.superCard4{
+	top: 0;
+	left: 60%;
+	z-index: 3;
+}
+div.viewPort div.superCard5{
+	top: 0;
+	left: 80%;
+	z-index: 4;
+}
+div.viewPort div.cardData{
+	width: 50%;
+	height:	100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+div.viewPort div.card{
+	width: 50%;
+	height: 100%;
+	box-shadow: -2px 0px 6px rgba(255,255,255, 0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div.viewPort div.card1{
+	background-color: rgb(246,36,89);
+}
+
+div.viewPort div.card2{
+	background-color: rgb(75,119,190);
+}
+
+div.viewPort div.card3{
+	background-color: rgb(27, 188, 155);
+}
+
+div.viewPort div.card4{
+	background-color: rgb(248,148,6);
+}
+
+div.viewPort div.card5{
+	background-color: rgb(210,82,127);
+}
+
+div.card div.back{
+	/*width: 5vw;
+	height: 5vw;
+	min-width: 40px;
+	min-height: 40px;
+	background-color: rgba(0,0,0,1);*/
+	font-size: 60px;
+	color:white;
+	position: absolute;
+	top:1vw;
+	left: 1vw;
+	/*border: 1px solid transparent;
+	border-radius: 50%;*/
+	opacity: 0;
+}
+
+div.card{
+	background-color: black!important ;
+}
+
+.bottomRibbon{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 5px;
+	background-color: #4B77BE;
+}

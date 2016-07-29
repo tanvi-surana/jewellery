@@ -1,0 +1,123 @@
+@backgroundColor:#D2D2D2;
+@navFontColor:#908F8F;
+@highlightColor:#30aadc;
+@baseFont:'Oxygen', sans-serif;
+
+body{
+	background-color: lighten(@backgroundColor,15%);
+}
+
+ 
+
+
+@media (min-width: 965px)
+{
+ 			#information
+            {
+               height:240px;
+               background-color:@backgroundColor;
+               display:flex;
+               //display: block;
+			  //position: absolute;
+			    
+               justify-content:space-around;
+               .info
+               {
+                  color:darken(@navFontColor,15%);
+                  ul
+                  {
+                  	 	
+                     list-style:none;
+                     li
+                     {
+                         
+                        padding-bottom:5px;
+                        a
+                        {
+                           cursor:pointer;
+                           text-decoration:none;
+                           //color:@navFontColor; 
+                        }
+                     }
+                  }
+
+               }
+            } 
+
+}            
+
+
+@media (min-width:768px) and (max-width:964px)
+{
+	#information
+            {
+               height:240px;
+               background-color:@backgroundColor;
+               display:flex;
+               //display: block;
+			  //position: absolute;
+			    
+               justify-content:space-around;
+               .info
+               {
+                  color:darken(@navFontColor,15%);
+                  ul
+                  {
+                  	 	
+                     list-style:none;
+                     li
+                     {
+                         
+                        padding-bottom:4px;
+                        a
+                        {
+                           cursor:pointer;
+                           text-decoration:none;
+                           //color:@navFontColor; 
+                        }
+                     }
+                  }
+
+               }
+            } 
+}
+
+
+
+@media (max-width:767px)
+{
+	#information
+            {
+               //height:240px;
+               background-color:@backgroundColor;
+              // display:flex;
+               display: block;
+			  //position: absolute;
+			    
+               justify-content:space-around;
+               .info
+               {
+                  color:darken(@navFontColor,15%);
+                  ul
+                  {
+                  	 	
+                     list-style:none;
+                     li
+                     {
+                         
+                        padding-bottom:4px;
+                        a
+                        {
+                           cursor:pointer;
+                           text-decoration:none;
+                           //color:@navFontColor; 
+                        }
+                     }
+                  }
+
+               }
+            } 
+    }
+
+
+

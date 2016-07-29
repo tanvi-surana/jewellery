@@ -1,0 +1,244 @@
+ <!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head lang="en"> 
+    <title>Aura | Jewellery</title>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src={% static "jQuery/jquery-1.11.2.min.js" %}></script>
+    <link rel="stylesheet" type="text/css" href={% static "fontAwsome/font-awesome-4.3.0/css/font-awesome.min.css" %}>
+    <link rel="stylesheet" type="text/css" href={% static "bootstrap/bootstrap-3.3.5-dist/css/bootstrap.min.css" %}>
+    <link rel="stylesheet/less" type="text/css" href={% static "product_detail/css/product_detail.less" %}>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ 
+  </head>
+  <body>
+    <div class="page">
+      {% include "navbar/navbar.html" %}
+      <!--Never Use Class .navBar -->
+          <div class="main_content">
+                <div class="outer">
+                    <div class="inner_lhs">
+                        <div class="image_div">
+                            {% for i in image_data %}
+                              <img src="{{i.image.url}}" alt="jewellery_image">
+                            {% endfor %}  
+                      </div> 
+                    </div>
+
+                   <div class="inner_rhs">
+                  <div class="inner_detail_rhs">
+                    <div id="product_name">
+                      <h3>
+                      <!-- Twinkle Solitaire Earrings -->
+                       Aura {{metal_type}} {{product_type}} {{product_category}}
+                    </h3> 
+                    </div>
+                 <div class="ribbon"></div> 
+                    <div id="product_price">
+                       <h2>
+                      Rs {{total_charges|floatformat:"0"}}
+                     </h2> 
+                    </div>
+                 <div class="ribbon"></div>
+       <!-- For loop for  product variants-->     
+                 <div id="row variant_row">
+                     <div>
+                      Set in {{metal_karat}} Kt {{metal_type}} ({{metal_weight|floatformat:"2"}} gms) {% if diamond_data %} with Diamonds ({{diamond_weight|floatformat:"2"}} Ct) {% endif %} 
+                      <div><a href="#outer2">See more product & price details </a></div>
+                     </div>
+                 </div>
+                 <div class="ribbon"></div>
+                 <div id="features">
+                  <ul>
+                    <li>
+                       <h6>30 Day MoneyBack </h6>
+                    </li>
+                    <li>
+                       <h6>Life Time Exchange</h6>
+                    </li>
+                    <li>
+                       <h6>Certified</h6>
+                    </li>
+                  </ul> 
+                 </div>
+
+                 <div class="ribbon"></div>
+                 <div id="button_id">
+                    <div>
+                      <button>Buy Now</button>
+                  </div>
+                   <div id="call_us">or call us at 9999999999</div> 
+                </div>
+                <div class="ribbon"></div>
+                    <div id="go_social">
+                        <ul id="go_social_list">
+                            <li id="ene">
+                                 <i class="fa fa-envelope"></i>
+                            </li>
+                            <li id="fb">
+                                <i class="fa fa-facebook-official"></i>
+                            </li>
+                            <li id="heart">
+                                <i class="fa fa-heart-o"></i>
+                            </li>
+                        </ul>
+                    </div>
+          </div>
+        </div>  
+    </div>
+    
+    <div class="divider"></div>
+
+    <div id="outer2">
+        <div id="product_panel"> 
+
+            <div id="basic_details">
+                 <h3>
+                     Product Details
+                 </h3>
+                 <table class="product_details" cellspacing="0">
+                    
+                    <tr>
+                       <td class="left_row">Stock Number</td> 
+                       <td>JE02403-YGP900</td>
+                    </tr>
+                    <tr>
+                      <td class="left_row">Metal/Purity</td>
+                      <td>{{metal_karat}} Kt {{metal_type}}</td>
+                    </tr>
+                    <tr>
+                      <td class="left_row">Approximate Metal Weight</td>
+                      <td>{{metal_weight|floatformat:"3"}} gms</td>
+                    </tr>
+                    <tr>
+                       <td class="left_row">Height</td>
+                      <td>11.7 mm</td>
+                    </tr>
+                    <tr>
+                      <td class="left_row">Width</td>
+                      <td>17.05 mm</td>
+                    </tr>
+                 </table>
+            </div>
+             {% if diamond_data %}     
+                  <div id="basic_diamond_details">
+                      <h4>
+                           Diamond Details
+                       </h4>
+                       <table class="diamond_details" cellspacing="0">
+                          <tr>
+                            <td class="left_row">Shape</td>
+                            <td>Weight</td>
+                            <td>Quality</td>
+                          </tr>
+                          {% for i in diamond_data %}
+                              <tr>
+                                <td class="left_row">{{i.diamond_shape}}</td>
+                                <td>{{i.weight_of_diamonds|floatformat:"2"}} ct</td>
+                                <td>{{i.diamond_color}}-{{i.diamond_clarity}}</td>
+                              </tr>
+                          {% endfor %}    
+                          <tr>
+                             <td class="left_row">Total Diamond Weight</td> 
+                             <td>{{diamond_weight|floatformat:"2"}} ct</td>
+                             <td></td>
+                          </tr>
+                          
+                       </table>
+                  </div>
+             {% endif %}
+
+            {% if gemstone_data %}
+            <div id="basic_gemstone_details">
+                <h4>
+                     Gemstone Details
+                 </h4>
+                 <table class="gemstone_details" cellspacing="0">
+                    <!-- Apply for loop for all the gemstones types-->
+                    <tr>
+                      <td class="left_row">Gemstone</td>
+                      <td>Weight</td>
+                    </tr>
+                    {% for i in gemstone_data %}
+                      <tr>
+                         <td class="left_row">{{ i.gemstone }}</td> 
+                         <td>{{ i.weight_of_gemstones|floatformat:"2"}} ct</td>
+                      </tr>
+                     {% endfor %}
+                 </table>
+            </div>
+            {% endif %}  
+
+         </div>        
+       <div id="query_form">
+            <div id="query">
+              
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>   
+    <div id="information">
+      <div id="about_us" class="info">
+          
+         <ul>
+           <li><h4>Know Aura</h4></li> 
+           <li><a>About Us</a></li>
+           <li><a>Privacy Policy</a></li>
+         </ul>
+      </div>
+      <div id="customer_service" class="info">
+        <ul>
+           <li><h4>Customer Service</h4></li>
+           <li><a>Payment options</a></li>
+           <li><a>Return Policy</a></li>
+           <li><a>Shipping Policy</a></li>
+           <li><a>Terms and Conditions</a></li>
+           <li><a>Frequently Asked Questions</a></li>
+         </ul>
+      </div>
+      
+      <div id="visit_us" class="info">
+        <ul>
+           <li><h4>Visit Us</h4></li>
+         </ul>  
+      </div>
+
+      <div id="contact_us" class="info">
+        <ul>
+          <li><h4>Contact Us</h4></li>
+          <li>1800-102-0103 (Toll Free)</li>
+          <li>+91-44-4293-5000</li>
+          <li>contactus@aura.com</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="rough"></div>
+    <script src={% static "less.js-master/dist/less.js" %} type="text/javascript"></script>
+    <script type="text/javascript" src={% static "jQuery/jquery-1.11.2.min.js" %}></script>
+    <script type="text/javaascript" src={% static "bootstrap/bootstrap-3.3.5-dist/js/bootstrap.min.js" %}>
+    </script>
+    <script type="text/javascript">
+    $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+    </script>
+  </body>
+</html>

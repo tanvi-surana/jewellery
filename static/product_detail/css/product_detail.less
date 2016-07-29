@@ -1,0 +1,1198 @@
+@backgroundColor:#D2D2D2;
+@navFontColor:#908F8F;
+//@highlightColor:#30aadc;
+@highlightColor:#08ECFF;
+@baseFont:'Oxygen', sans-serif;
+@linkColor:black;
+@tableBackgroundColor:#f6f1ef;
+@borderBottom:#d9d9d7;
+
+body{
+	background-color: lighten(@backgroundColor,15%);
+}
+
+
+
+@media (min-width: 965px)
+{
+	.page{
+		.main_content{
+		    margin-top: 85px;
+			transition: margin-top 1s ease;
+			padding-top: 100px; 
+		    
+		    .outer
+		    {
+		        width: 500vw;
+				max-width: 1700px;
+				margin-left: 100px;
+				margin-right: auto;
+				display: flex;
+				//flex-wrap: wrap;
+			    //justify-content: space-around;
+				.inner_lhs
+				{
+				    width: 325px;
+					height: 425px;
+					background-color: lighten(@backgroundColor,10%);
+					border: 2px solid transparent;
+					border-radius: 6px;
+				   .image_div
+				   {
+						margin-top: 5%;
+						margin-right: 5%;
+						margin-left: 5%;
+					    margin-bottom:5%;
+					    width: 90%;
+						height: 90%;
+						background-color: white;
+
+				   }
+
+			    }
+
+			    .inner_lhs:hover
+				{
+				    transition: transform 0.5s ease;
+					transform: scale(1.03);
+					transition: box-shadow 0.5s ease;
+					box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+				}
+
+				.inner_rhs
+				{
+				   padding-left:2%;
+				   width:600px;
+				   height:380px;
+				   .inner_detail_rhs
+				   {
+				      #product_name
+				      {
+				         h3
+				         {
+				           font-family: @baseFont;
+						  // color: @navFontColor;
+						   font-size: 2.5em;
+				         }
+				      }
+
+				      #product_price
+				      {
+				          font-family: @baseFont;
+						  // color: @navFontColor;
+						  font-size: 1.5em;
+				      }
+
+				      #features
+				      {
+				         ul
+				         {
+				            display:flex;
+				            justify-content:space-around;
+
+				         }
+				      }
+
+				      #button_id
+				      {
+				         margin-top:10px;
+				         button
+				         {
+				             width:150px;
+				             height:40px;
+				             border:2px solid transparent;
+				             border-radius:5px;
+				             background-color:@highlightColor;
+				             font-family: @baseFont;
+						     color:@navFontColor;
+						     font-size: 1.5em;
+
+
+				         }
+
+				         #call_us
+				         {
+				            margin-top:7px;
+				         }
+				      }
+
+				      #go_social
+				      {
+		                 margin-top:10px;
+
+		                 ul
+		                 {
+		                    list-style:none;
+		                    display:flex;
+
+		                    li
+		                    {
+		                        margin-left:25px;
+		                        font-size:1.7em;
+		                        color:@navFontColor;
+
+		                    }
+
+		                    #ene:hover
+		                    {
+		                         color: @highlightColor;
+                                 
+		                    }
+		                    #fb:hover
+		                    {
+		                       color:@highlightColor;
+		                    }
+		                    #heart:hover
+		                    {
+		                       color:@highlightColor;
+		                    }
+
+		                 }		      
+				      }
+
+				   }
+
+				}
+
+		    }
+           
+           #outer2
+           {
+               width:100%;
+               //height:400px;
+               height:110%;
+               background-color:darken(@backgroundColor,1%);
+               margin-top:0.9%;
+               display:flex;
+               #product_panel
+                {   
+                    width:80%;
+                  
+	               #basic_details
+	               {
+	                  width:75%;
+                      margin-top:3%;
+                      margin-left:5%;
+
+
+				        .product_details
+				        { 
+
+	                       border: none;
+	                       width: 100%;
+				           tr
+				           {
+				              margin: 0rem;
+							  border-width: 1px;
+							  border-color: #78777c;
+				              td
+				              {
+				                      border-bottom: 1px solid @borderBottom;
+	                                  background: @tableBackgroundColor;
+	                                  padding: 0.4rem 0rem;
+									  color: #1f1e24;
+									  font-size: 12px;
+									  word-wrap: break-word;
+									  padding-left: 10px;
+							   }
+				            }
+				        }
+				    }
+
+				    #basic_diamond_details
+                     {
+                          width:75%;
+                          margin-top:3%;
+                          margin-left:5%;
+					     .diamond_details
+					        {
+					            border: none;
+		                       width: 100%;
+					           tr
+					           {
+					              margin: 0rem;
+								  border-width: 1px;
+								  border-color: #78777c;
+					              td
+					              {
+					                      border-bottom: 1px solid @borderBottom;
+		                                  background: @tableBackgroundColor;
+		                                  padding: 0.4rem 0rem;
+										  color: #1f1e24;
+										  font-size: 12px;
+										  word-wrap: break-word;
+										  padding-left: 10px;
+									}
+					            }
+					        }
+					    }
+
+
+				    #basic_gemstone_details
+                     {
+                          width:75%;
+                      margin-top:3%;
+                      margin-left:5%;
+					     .gemstone_details
+					        {
+					            border: none;
+		                       width: 100%;
+					           tr
+					           {
+					              margin: 0rem;
+								  border-width: 1px;
+								  border-color: #78777c;
+					              td
+					              {
+					                      border-bottom: 1px solid @borderBottom;
+		                                  background: @tableBackgroundColor;
+		                                  padding: 0.4rem 0rem;
+										  color: #1f1e24;
+										  font-size: 12px;
+										  word-wrap: break-word;
+										  padding-left: 10px;
+									}
+					            }
+					        }
+					    }        
+                   }
+
+                #query-form
+                {
+                   width:20%;
+                   height:400px;
+                   background-color:white;
+                }
+
+            }
+
+            #information
+            {
+               display:flex;
+               justify-content:space-around;
+               .info
+               {
+                  ul
+                  {
+                     list-style:none;
+                     li
+                     {
+                        color:@linkColor;
+                        a
+                        {
+                           cursor:pointer;
+                           text-decoration:none;
+                           color:@linkColor; 
+                        }
+                     }
+                  }
+
+               }
+            }
+
+		}
+	}
+}
+
+
+@media (min-width:768px) and (max-width:964px)
+{
+	.page{
+		.main_content{
+		    margin-top: 85px;
+			transition: margin-top 1s ease;
+			padding-top: 100px; 
+		    
+		    .outer
+		    {
+		        width: 500vw;
+				max-width: 900px;
+				margin-left: 100px;
+				margin-right: auto;
+				//display: flex;
+				//flex-wrap: wrap;
+			    //justify-content: space-around;
+				.inner_lhs
+				{
+				    width: 325px;
+					height: 425px;
+					background-color: lighten(@backgroundColor,10%);
+					border: 2px solid transparent;
+					border-radius: 6px;
+				   .image_div
+				   {
+						margin-top: 5%;
+						margin-right: 5%;
+						margin-left: 5%;
+					    margin-bottom:5%;
+					    width: 90%;
+						height: 90%;
+						background-color: white;
+
+				   }
+
+			    }
+
+			    .inner_lhs:hover
+				{
+				    transition: transform 0.5s ease;
+					transform: scale(1.03);
+					transition: box-shadow 0.5s ease;
+					box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+				}
+
+				.inner_rhs
+				{
+				   padding-left:0%;
+				   padding-top:2%;
+				   width:600px;
+				   height:380px;
+				   .inner_detail_rhs
+				   {
+				      #product_name
+				      {
+				         h3
+				         {
+				           font-family: @baseFont;
+						  // color: @navFontColor;
+						   font-size: 2.5em;
+				         }
+				      }
+
+				      #product_price
+				      {
+				          font-family: @baseFont;
+						  // color: @navFontColor;
+						  font-size: 1.5em;
+				      }
+
+				      #features
+				      {
+				         ul
+				         {
+				            display:flex;
+				            list-style:none;
+				            padding-left:0%;
+				            //justify-content:space-around;
+
+				            li
+				            {
+				               padding-left:3%;
+				            }
+
+				         }
+				      }
+
+				      #button_id
+				      {
+				         margin-top:10px;
+				         button
+				         {
+				             width:150px;
+				             height:40px;
+				             border:2px solid transparent;
+				             border-radius:5px;
+				             background-color:@highlightColor;
+				             font-family: @baseFont;
+						     color:@navFontColor;
+						     font-size: 1.5em;
+
+
+				         }
+
+				         #call_us
+				         {
+				            margin-top:7px;
+				         }
+				      }
+
+				      #go_social
+				      {
+		                 margin-top:10px;
+
+
+		                 ul
+		                 {
+		                    list-style:none;
+		                    display:flex;
+		                    padding-left:0%;
+
+		                    li
+		                    {
+		                        margin-left:25px;
+		                        font-size:1.7em;
+		                        color:navFontColor;
+
+		                    }
+
+		                    #ene:hover
+		                    {
+		                       color:@highlightColor;
+
+		                    }
+		                    #fb:hover
+		                    {
+		                       color:@highlightColor;
+		                    }
+		                    #heart:hover
+		                    {
+		                       color:@highlightColor;
+		                    }
+
+		                 }		      
+				      }
+
+				   }
+
+				}
+
+		    }
+
+		   #outer2
+           {
+               width:100%;
+               //height:400px;
+               height:100%;
+               //background-color:darken(@backgroundColor,1%);
+               margin-top:0.9%;
+               
+               #product_panel
+                {   
+                   background-color:darken(@backgroundColor,1%);
+
+	               #basic_details
+	               {
+	                  width:60%;
+                      margin-top:3%;
+                      margin-left:3%;
+
+
+				        .product_details
+				        { 
+
+	                       border: none;
+	                       width: 100%;
+				           tr
+				           {
+				              margin: 0rem;
+							  border-width: 1px;
+							  border-color: #78777c;
+				              td
+				              {
+				                      border-bottom: 1px solid @borderBottom;
+	                                  background:@tableBackgroundColor;
+	                                  padding: 0.4rem 0rem;
+									  color: #1f1e24;
+									  font-size: 12px;
+									  word-wrap: break-word;
+									  padding-left: 10px;
+							   }
+				            }
+				        }
+				    }
+
+				    #basic_diamond_details
+                     {
+                          width:60%;
+                          margin-top:3%;
+                          margin-left:3%;
+					     .diamond_details
+					        {
+					            border: none;
+		                       width: 100%;
+					           tr
+					           {
+					              margin: 0rem;
+								  border-width: 1px;
+								  border-color: #78777c;
+					              td
+					              {
+					                      border-bottom: 1px solid @borderBottom;
+		                                  background:@tableBackgroundColor;
+		                                  padding: 0.4rem 0rem;
+										  color: #1f1e24;
+										  font-size: 12px;
+										  word-wrap: break-word;
+										  padding-left: 10px;
+									}
+					            }
+					        }
+					    }
+
+
+				    #basic_gemstone_details
+                     {
+                          width:60%;
+                      margin-top:3%;
+                      margin-left:3%;
+					     .gemstone_details
+					        {
+					            border: none;
+		                       width: 100%;
+					           tr
+					           {
+					              margin: 0rem;
+								  border-width: 1px;
+								  border-color: #78777c;
+					              td
+					              {
+					                      border-bottom: 1px solid @borderBottom;
+		                                  background:@tableBackgroundColor;
+		                                  padding: 0.4rem 0rem;
+										  color: #1f1e24;
+										  font-size: 12px;
+										  word-wrap: break-word;
+										  padding-left: 10px;
+									}
+					            }
+					        }
+					    }        
+                   }
+
+                #query-form
+                {
+                   width:30%;
+                   height:50%;
+                   margin-top:3%;
+                     #query
+                     {
+                        background-color:white;
+                        height:100%;
+                        width:100%;
+                     }
+                }
+
+            }
+
+
+            #information
+            {
+               display:flex;
+               justify-content:space-around;
+               .info
+               {
+                  ul
+                  {
+                     list-style:none;
+                     li
+                     {
+                        color:@linkColor;
+                        a
+                        {
+                           cursor:pointer;
+                           text-decoration:none;
+                           color:@linkColor; 
+                        }
+                     }
+                  }
+
+               }
+            }
+
+		}
+	}
+}
+
+@media(max-width:480px)
+{
+	.page{
+		.main_content{
+		    margin-top: 85px;
+			transition: margin-top 1s ease;
+			padding-top: 100px; 
+		    
+		    .outer
+		    {
+		        width: 500vw;
+				max-width: 500px;
+				margin-left: 50px;
+				margin-right: auto;
+				//display: flex;
+				//flex-wrap: wrap;
+			    //justify-content: space-around;
+				.inner_lhs
+				{
+				    width: 300px;
+					height: 400px;
+					background-color: lighten(@backgroundColor,10%);
+					border: 2px solid transparent;
+					border-radius: 6px;
+				   .image_div
+				   {
+						margin-top: 5%;
+						margin-right: 5%;
+						margin-left: 5%;
+					    margin-bottom:5%;
+					    width: 90%;
+						height: 90%;
+						background-color: white;
+
+				   }
+
+			    }
+
+			    .inner_lhs:hover
+				{
+				    transition: transform 0.5s ease;
+					transform: scale(1.03);
+					transition: box-shadow 0.5s ease;
+					box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+				}
+
+				.inner_rhs
+				{
+				   padding-left:0%;
+				   padding-top:2%;
+				   width:600px;
+				   height:380px;
+				   .inner_detail_rhs
+				   {
+				      #product_name
+				      {
+				         h3
+				         {
+				           font-family: @baseFont;
+						  // color: @navFontColor;
+						   font-size: 1.5em;
+				         }
+				      }
+
+				      #product_price
+				      {
+				          font-family: @baseFont;
+						  // color: @navFontColor;
+						  font-size: 0.5em;
+				      }
+
+				      #features
+				      {
+				         ul
+				         {
+				            display:flex;
+				            list-style:none;
+				            padding-left:0%;
+				            //justify-content:space-around;
+
+				            li
+				            {
+				               padding-left:3%;
+				            }
+
+				         }
+				      }
+
+				      #button_id
+				      {
+				         margin-top:10px;
+				         button
+				         {
+				             width:150px;
+				             height:40px;
+				             border:2px solid transparent;
+				             border-radius:5px;
+				             background-color:@highlightColor;
+				             font-family: @baseFont;
+						     color:@navFontColor;
+						     font-size: 1.5em;
+
+
+				         }
+
+				         #call_us
+				         {
+				            margin-top:7px;
+				         }
+				      }
+
+				      #go_social
+				      {
+		                 margin-top:10px;
+
+
+		                 ul
+		                 {
+		                    list-style:none;
+		                    display:flex;
+		                    padding-left:0%;
+
+		                    li
+		                    {
+		                        margin-left:25px;
+		                        font-size:1.7em;
+		                        color:navFontColor;
+
+		                    }
+
+		                    #ene:hover
+		                    {
+		                       color:@highlightColor;
+
+		                    }
+		                    #fb:hover
+		                    {
+		                       color:@highlightColor;
+		                    }
+		                    #heart:hover
+		                    {
+		                       color:@highlightColor;
+		                    }
+
+		                 }		      
+				      }
+
+				   }
+
+				}
+
+		    }
+
+		   #outer2
+           {
+               width:100%;
+               height:100%;
+               //height:400px;
+               background-color:darken(@backgroundColor,1%);
+               margin-top:0.9%;
+               
+               #product_panel
+                {   
+
+	               #basic_details
+	               {
+	                  width:60%;
+                      margin-top:3%;
+                      margin-left:1%;
+
+
+				        .product_details
+				        { 
+
+	                       border: none;
+	                       width: 100%;
+				           tr
+				           {
+				              margin: 0rem;
+							  border-width: 1px;
+							  border-color: #78777c;
+				              td
+				              {
+				                      border-bottom: 1px solid @borderBottom;
+	                                  background:@tableBackgroundColor;
+	                                  padding: 0.4rem 0rem;
+									  color: #1f1e24;
+									  font-size: 12px;
+									  word-wrap: break-word;
+									  padding-left: 10px;
+							   }
+				            }
+				        }
+				    }
+
+				    #basic_diamond_details
+                     {
+                          width:60%;
+                          margin-top:3%;
+                          margin-left:1%;
+					     .diamond_details
+					        {
+					            border: none;
+		                       width: 100%;
+					           tr
+					           {
+					              margin: 0rem;
+								  border-width: 1px;
+								  border-color: #78777c;
+					              td
+					              {
+					                      border-bottom: 1px solid @borderBottom;
+		                                  background:@tableBackgroundColor;
+		                                  padding: 0.4rem 0rem;
+										  color: #1f1e24;
+										  font-size: 12px;
+										  word-wrap: break-word;
+										  padding-left: 10px;
+									}
+					            }
+					        }
+					    }
+
+
+				    #basic_gemstone_details
+                     {
+                          width:60%;
+                      margin-top:3%;
+                      margin-left:1%;
+					     .gemstone_details
+					        {
+					            border: none;
+		                       width: 100%;
+					           tr
+					           {
+					              margin: 0rem;
+								  border-width: 1px;
+								  border-color: #78777c;
+					              td
+					              {
+					                      border-bottom: 1px solid @borderBottom;
+		                                  background:@tableBackgroundColor;
+		                                  padding: 0.4rem 0rem;
+										  color: #1f1e24;
+										  font-size: 12px;
+										  word-wrap: break-word;
+										  padding-left: 10px;
+									}
+					            }
+					        }
+					    }        
+                   }
+
+                #query-form
+                {
+                   width:30%;
+                   height:400px;
+                   background-color:white;
+                }
+
+            }
+
+
+            #information
+            {
+               display:flex;
+               justify-content:space-around;
+               .info
+               {
+                  ul
+                  {
+                     list-style:none;
+                     li
+                     {
+                        color:@linkColor;
+                        a
+                        {
+                           cursor:pointer;
+                           text-decoration:none;
+                           color:@linkColor; 
+                        }
+                     }
+                  }
+
+               }
+            }
+
+		}
+	}
+}
+
+@media (min-width:480px) and (max-width:767px)
+{
+	.page{
+		.main_content{
+		    margin-top: 85px;
+			transition: margin-top 1s ease;
+			padding-top: 100px; 
+		    
+		    .outer
+		    {
+		        width: 500vw;
+				max-width: 700px;
+				margin-left: 70px;
+				margin-right: auto;
+				//display: flex;
+				//flex-wrap: wrap;
+			    //justify-content: space-around;
+				.inner_lhs
+				{
+				    width: 300px;
+					height: 400px;
+					background-color: lighten(@backgroundColor,10%);
+					border: 2px solid transparent;
+					border-radius: 6px;
+				   .image_div
+				   {
+						margin-top: 5%;
+						margin-right: 5%;
+						margin-left: 5%;
+					    margin-bottom:5%;
+					    width: 90%;
+						height: 90%;
+						background-color: white;
+
+				   }
+
+			    }
+
+			    .inner_lhs:hover
+				{
+				    transition: transform 0.5s ease;
+					transform: scale(1.03);
+					transition: box-shadow 0.5s ease;
+					box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+				}
+
+				.inner_rhs
+				{
+				   padding-left:0%;
+				   padding-top:2%;
+				   width:600px;
+				   height:380px;
+				   .inner_detail_rhs
+				   {
+				      #product_name
+				      {
+				         h3
+				         {
+				           font-family: @baseFont;
+						  // color: @navFontColor;
+						   font-size: 2em;
+				         }
+				      }
+
+				      #product_price
+				      {
+				          font-family: @baseFont;
+						  // color: @navFontColor;
+						  font-size: 1em;
+				      }
+
+				      #features
+				      {
+				         ul
+				         {
+				            display:flex;
+				            list-style:none;
+				            padding-left:0%;
+				            //justify-content:space-around;
+
+				            li
+				            {
+				               padding-left:3%;
+				            }
+
+				         }
+				      }
+
+				      #button_id
+				      {
+				         margin-top:10px;
+				         button
+				         {
+				             width:150px;
+				             height:40px;
+				             border:2px solid transparent;
+				             border-radius:5px;
+				             background-color:@highlightColor;
+				             font-family: @baseFont;
+						     color:@navFontColor;
+						     font-size: 1.5em;
+
+
+				         }
+
+				         #call_us
+				         {
+				            margin-top:7px;
+				         }
+				      }
+
+				      #go_social
+				      {
+		                 margin-top:10px;
+
+
+		                 ul
+		                 {
+		                    list-style:none;
+		                    display:flex;
+		                    padding-left:0%;
+
+		                    li
+		                    {
+		                        margin-left:25px;
+		                        font-size:1.7em;
+		                        color:navFontColor;
+
+		                    }
+
+		                    #ene:hover
+		                    {
+		                       color:@highlightColor;
+
+		                    }
+		                    #fb:hover
+		                    {
+		                       color:@highlightColor;
+		                    }
+		                    #heart:hover
+		                    {
+		                       color:@highlightColor;
+		                    }
+
+		                 }		      
+				      }
+
+				   }
+
+				}
+
+		    }
+
+
+		   #outer2
+           {
+               width:100%;
+               //height:400px;
+               height:100%;
+               background-color:darken(@backgroundColor,1%);
+               margin-top:0.9%;
+               
+               #product_panel
+                {   
+
+
+	               #basic_details
+	               {
+	                  width:60%;
+                      margin-top:3%;
+                     // margin-left:%;
+
+
+				        .product_details
+				        { 
+
+	                       border: none;
+	                       width: 100%;
+	                       margin-left:10%;
+				           tr
+				           {
+				              margin: 0rem;
+							  border-width: 1px;
+							  border-color: #78777c;
+				              td
+				              {
+				                      border-bottom: 1px solid @borderBottom;
+	                                  background: @tableBackgroundColor;
+	                                  padding: 0.4rem 0rem;
+									  color: #1f1e24;
+									  font-size: 12px;
+									  word-wrap: break-word;
+									  padding-left: 10px;
+							   }
+				            }
+				        }
+				    }
+
+				    #basic_diamond_details
+                     {
+                          width:60%;
+                          margin-top:3%;
+                          margin-left:5%;
+					     .diamond_details
+					        {
+					            border: none;
+		                       width: 100%;
+					           tr
+					           {
+					              margin: 0rem;
+								  border-width: 1px;
+								  border-color: #78777c;
+					              td
+					              {
+					                      border-bottom: 1px solid @borderBottom;
+		                                  background: @tableBackgroundColor;
+		                                  padding: 0.4rem 0rem;
+										  color: #1f1e24;
+										  font-size: 12px;
+										  word-wrap: break-word;
+										  padding-left: 10px;
+									}
+					            }
+					        }
+					    }
+
+
+				    #basic_gemstone_details
+                     {
+                          width:60%;
+                      margin-top:3%;
+                      margin-left:5%;
+					     .gemstone_details
+					        {
+					            border: none;
+		                       width: 100%;
+					           tr
+					           {
+					              margin: 0rem;
+								  border-width: 1px;
+								  border-color: #78777c;
+					              td
+					              {
+					                      border-bottom: 1px solid @borderBottom;
+		                                  background:@tableBackgroundColor;
+		                                  padding: 0.4rem 0rem;
+										  color: #1f1e24;
+										  font-size: 12px;
+										  word-wrap: break-word;
+										  padding-left: 10px;
+									}
+					            }
+					        }
+					    }        
+                   }
+
+                #query-form
+                {
+                   width:30%;
+                   height:400px;
+                   background-color:white;
+                }
+
+            }
+
+            
+            #information
+            {
+               display:flex;
+               justify-content:space-around;
+               .info
+               {
+                  ul
+                  {
+                     list-style:none;
+                     li
+                     {
+                        color:@linkColor;
+                        a
+                        {
+                           cursor:pointer;
+                           text-decoration:none;
+                           color:@linkColor; 
+                        }
+                     }
+                  }
+
+               }
+            }
+
+		}
+	}
+}
+
+
+.divider
+{
+	width:100%;
+	height:10px;
+	background-color:darken(@backgroundColor,4%);
+	margin-top:1%;
+} 
+.ribbon
+{
+	width:100%;
+	height:1px;
+	background-color:@backgroundColor;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+ 

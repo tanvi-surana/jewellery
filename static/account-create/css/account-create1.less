@@ -1,0 +1,147 @@
+ @backgroundColor:#D2D2D2;
+@navFontColor:#908F8F;
+//@highlightColor:#30aadc;
+@highlightColor:#08ECFF;
+@baseFont:'Oxygen', sans-serif;
+@linkColor:black;
+@tableBackgroundColor:#f6f1ef;
+@borderBottom:#d9d9d7;
+
+body{
+	background-color: lighten(@backgroundColor,15%);
+	font-family:@baseFont;
+}
+
+
+
+
+	.page{
+		.main_content{
+		    margin-top: 85px;
+			transition: margin-top 1s ease;
+			 //padding-top: 100px; 
+                .wrapper
+                 {	
+                     width: 100%;
+					 margin-right: auto;	    
+					 .outer
+					  {
+					     background-color:white;
+					     width:100%;
+					     height:700px;
+					     .inner
+					     {
+
+					        margin-left:5%;
+					        margin-right:5%;
+					        height:100%;
+                            background-color:lighten(@backgroundColor,15%);
+                             #box
+                            {
+                               box-shadow:-1px 4px 8px 0px rgba(0,0,0,0.75);;
+                               margin-left:35%;
+                               margin-right:10%;
+                               margin-top:10%;
+                               width:30%;
+                               height:95%;
+                               
+                               
+                               .ribbon
+                               {
+                                   height:1%;
+                                   background-color:@highlightColor; 
+                               } 
+                               #create_account
+                               {
+                                  width:80%;
+                                  height:10%;
+                                  font-size:2em;
+                                  font-family:@baseFont;
+                                  font-weight:bold;
+                                  margin-left:15%;
+                                  margin-right:10%;
+                                  margin-top:7%;
+                                   
+                               }
+
+                               #line
+                               {
+                                  width:80%;
+                                  margin-left:10%;
+                                  margin-right:10%;
+                                  height:1px;
+                                  background-color:@borderBottom;
+                               }
+
+                               #account_benefits
+                               {
+                                  h4
+                                  {
+                                     margin-left:5%;
+                                     margin-top:8%;
+                                     font-size:1.4em;
+                                  }
+
+                                  div
+                                  {
+                                     margin-left:5%;
+                                     margin-right:7%;
+                                     font-size:0.75em;
+                                  }
+                               }
+
+                               #account_info
+                               {
+                                   margin-left:5%;
+                                     margin-top:8%;
+                                     font-size:1.4em;
+                               }
+
+                               ul
+                               {
+                                  list-style:none;
+                                  em
+                                  {
+                                     color:red;
+                                     margin-right:4px;
+                                  }
+                                  .name
+                                   {
+                                      margin-left:25%;
+                                      margin-top:4%;
+                                      font-size:0.8em;
+                                   } 
+                                  .input-text
+                                  {
+                                     width:80%;
+                                     margin-top:4%;
+                                     border: 1px solid #C7C7C7
+                                  }
+                                  .req
+                                  {
+                                    color:red;
+                                  }
+                               }
+
+                               .button
+                               {
+                                  margin-left:35%;
+                                  margin-top:2%;  
+					              height:40px;
+					              border:2px solid transparent;
+					              border-radius:5px;
+					              background-color:@highlightColor;
+					              font-family: @baseFont;
+							      color:@navFontColor;
+							      font-size: 1em;
+                               }
+                            }
+					     }     
+							
+	                  }
+                }    
+	    }
+    }
+
+
+ 

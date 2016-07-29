@@ -1,0 +1,968 @@
+@backgroundColor:#D2D2D2;
+@navFontColor:#908F8F;
+@highlightColor:#30aadc;
+@highlightColor:#08ECFF;
+@baseFont:'Oxygen', sans-serif;
+@font1:'Source Sans Pro', sans-serif;
+
+////@highlightColor:darken(skyblue,20%);
+//#D2527F
+::selection{
+	background-color: rgba(210, 82, 127, 0.15)
+}
+
+a{
+	color:@navFontColor;
+} 
+
+a:hover
+{
+	text-decoration:none;
+	color:@navFontColor;
+}
+
+@media(min-width:1200px)
+{
+	.navBar{
+		box-shadow: -2px 0px 6px rgba(0,0,0, 0.5);
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
+		height: 84px;
+		-webkit-user-select: none;
+	  	-moz-user-select: none;
+	  	-ms-user-select: none;
+	  	user-select: none;
+		cursor: default;
+		background-color: lighten(@backgroundColor,15%);
+
+		.navRibbon{
+			width: 100%;
+			height: 3px;
+			background-color: @highlightColor;
+		}
+		.wrapper{
+			padding-left: 17px;
+			padding-right: 17px;
+			padding-top: 7px;
+			padding-bottom: 4px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+
+			.logo{
+				background-image: url("http://127.0.0.1:8000/static/images/non-product/logocarat.png");
+				height: 67px;
+				background-repeat: no-repeat;
+				background-position:2px;
+				padding: 0;
+				width: 165px;
+			}
+
+			.nav{
+				padding: 0;
+				//width:530px;
+				display: block;
+				ul{
+					padding-top:12px;
+					color: @navFontColor;
+					font-family: @baseFont;
+					.list{
+						display: inline-block;
+						position: relative;
+						li{
+							display: inline-block;
+							padding-left: 15px;
+							padding-right: 15px;
+							margin-top: 6px;
+							margin-bottom: 10px;
+							font-size: 1.3em;
+						}
+						div.data.jwellery{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -90%;
+							height: 400px;
+							width: 800px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+
+						div.data.solitaires{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -180%;
+							height: 400px;
+							width: 800px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+
+						div.data.goldCoins{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -242%;
+							height: 400px;
+							width: 800px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+
+						div.data.collections{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -340%;
+							height: 400px;
+							width: 800px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+
+						div.data.gifts{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -250%;
+							height: 300px;
+							width: 400px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+					}
+				}
+
+			}
+
+			.dock{
+				width: 180px;
+				ul{
+					color: @navFontColor;
+					font-family: @baseFont;
+					font-size: 1.5em;
+					padding-top: 20px;
+
+					li{
+						display: inline;
+						padding-left: 20px;
+						position: relative;
+						color: @navFontColor;
+
+						div.circle{
+							position: absolute;
+							top: -10px;
+							left: 5px;
+							display: inline-block;
+							width: 50px;
+							height: 50px;
+							background-color: transparent;
+							border: 1px solid transparent;
+							border-radius: 50%;
+
+							.supp{
+								width: 50px;
+								height: 50px;
+								position: absolute;
+								top: 20px;
+							}
+						}
+
+						div.account{
+							left: 2px;
+						}
+
+						div.wishlist{
+							top: -12px;
+						}
+
+						div.cart div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: absolute;
+								top: 63px;
+								left: -150px;
+								width: 360px;
+								height: 400px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+						}
+
+						div.wishlist div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: absolute;
+								top: 63px;
+								left: -150px;
+								width: 360px;
+								height: 400px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+						}
+
+						div.search div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: absolute;
+								top: 63px;
+								left: -150px;
+								width: 360px;
+								height: 50px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+
+						}
+
+						div.account div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: absolute;
+								top: 63px;
+								left: -100px;
+								width: 250px;
+								height: 250px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+
+						}
+					}
+
+					li.more{
+						display: none;
+					}
+
+					li:hover{
+						color: white;
+						div.circle{
+							background-color: @highlightColor;
+							transition: width 0.1s ease,height 0.1s ease;
+							width: 50px;
+							height: 50px;
+							box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+							div.toolTip{
+								display: block;
+								.tip{
+									display: block;
+								}
+
+								.tipBox{
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.sm-navPannel{
+				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width:935px) and (max-width:1199px)
+{
+	.navBar{
+		box-shadow: -2px 0px 6px rgba(0,0,0, 0.5);
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
+		height: 84px;
+		-webkit-user-select: none;
+	  	-moz-user-select: none;
+	  	-ms-user-select: none;
+	  	user-select: none;
+		cursor: default;
+		background-color: lighten(@backgroundColor,15%);
+
+		.navRibbon{
+			width: 100%;
+			height: 3px;
+			background-color: @highlightColor;
+		}
+		.wrapper{
+			padding-left: 17px;
+			padding-right: 17px;
+			padding-top: 7px;
+			padding-bottom: 4px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-left: auto;
+			margin-right: auto;
+
+			.logo{
+				background-image: url("http://127.0.0.1:8000/static/images/non-product/logocarat.png");
+				height: 67px;
+				background-repeat: no-repeat;
+				background-position:2px;
+				padding: 0;
+				width: 165px;
+			}
+
+			.nav{
+				padding: 0;
+				width:530px;
+				display: block;
+				ul{
+					padding-top:12px;
+					color: @navFontColor;
+					font-family: @baseFont;
+					.list{
+						display: inline-block;
+						position: relative;
+						li{
+							display: inline-block;
+							padding-left: 15px;
+							padding-right: 15px;
+							margin-top: 6px;
+							margin-bottom: 10px;
+							font-size: 1.3em;
+						}
+						div.data.jwellery{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -90%;
+							height: 400px;
+							width: 800px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+
+						div.data.solitaires{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -180%;
+							height: 400px;
+							width: 800px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+
+						div.data.goldCoins{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -242%;
+							height: 400px;
+							width: 800px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+
+						div.data.collections{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -340%;
+							height: 400px;
+							width: 800px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+
+						div.data.gifts{
+							display: none;
+							position: absolute;
+							top: 100%;
+							left: -250%;
+							height: 300px;
+							width: 400px;
+							box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+							background-color: lighten(@backgroundColor,15%);
+							border-bottom: 3px solid @highlightColor;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 2px;
+						}
+					}
+				}
+
+			}
+
+			.dock{
+				width: 180px;
+				ul{
+					color: @navFontColor;
+					font-family: @baseFont;
+					font-size: 1.5em;
+					padding-top: 20px;
+
+					li{
+						display: inline;
+						padding-left: 20px;
+						position: relative;
+						color: @navFontColor;
+
+						div.circle{
+							position: absolute;
+							top: -10px;
+							left: 5px;
+							display: inline-block;
+							width: 50px;
+							height: 50px;
+							background-color: transparent;
+							border: 1px solid transparent;
+							border-radius: 50%;
+
+							.supp{
+								width: 50px;
+								height: 50px;
+								position: absolute;
+								top: 20px;
+							}
+						}
+
+						div.account{
+							left: 2px;
+						}
+
+						div.wishlist{
+							top: -12px;
+						}
+
+						div.cart div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: fixed;
+								top: 85px;
+								right: 2vw;
+								width: 360px;
+								height: 400px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+						}
+
+						div.wishlist div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								right: 2vw;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: fixed;
+								top: 85px;
+								right: 2vw;
+								width: 360px;
+								height: 400px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+						}
+
+						div.search div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: fixed;
+								top: 85px;
+								right: 2vw;
+								width: 360px;
+								height: 50px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+
+						}
+
+						div.account div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: fixed;
+								top: 85px;
+								right: 1vw;
+								width: 250px;
+								height: 250px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+
+						}
+					}
+
+					li.more{
+						display: none;
+					}
+
+					li:hover{
+						color: white;
+						div.circle{
+							background-color: @highlightColor;
+							transition: width 0.1s ease,height 0.1s ease;
+							width: 50px;
+							height: 50px;
+							box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+							div.toolTip{
+								.tip{
+									display: block;
+								}
+
+								.tipBox{
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.sm-navPannel{
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width:934px)
+{
+	.navBar{
+		box-shadow: -2px 0px 6px rgba(0,0,0, 0.4);
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
+		overflow: hidden;
+		min-width: 500px;
+		height: 84px;
+		transition:height 1s ease;
+		-webkit-user-select: none;
+	  	-moz-user-select: none;
+	  	-ms-user-select: none;
+	  	user-select: none;
+		cursor: default;
+		background-color: lighten(@backgroundColor,15%);
+		.navRibbon{
+			width: 100%;
+			height: 3px;
+			background-color: @highlightColor;
+		}
+
+		.wrapper{
+			padding-left: 17px;
+			padding-right: 17px;
+			padding-top: 7px;
+			padding-bottom: 4px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.logo{
+				background-image: url("http://127.0.0.1:8000/static/images/non-product/logocarat.png");
+				height: 67px;
+				background-repeat: no-repeat;
+				background-position:2px;
+				padding: 0;
+				width: 165px;
+			}
+
+			.nav{
+				display: none;
+			}
+
+			.dock{
+				width: 240px;
+				ul{
+					color: @navFontColor;
+					font-family: @baseFont;
+					font-size: 1.5em;
+					padding-top: 20px;
+
+					li{
+						display: inline;
+						padding-left: 20px;
+						position: relative;
+						color: @navFontColor;
+
+						div.circle{
+							position: absolute;
+							top: -10px;
+							left: 5px;
+							display: inline-block;
+							width: 50px;
+							height: 50px;
+							background-color: transparent;
+							border: 1px solid transparent;
+							border-radius: 50%;
+
+							.supp{
+								width: 50px;
+								height: 50px;
+								position: absolute;
+								top: 20px;
+							}
+						}
+
+						div.account{
+							left: 2px;
+						}
+
+						div.wishlist{
+							top: -12px;
+						}
+
+
+						div.cart div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 54px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: fixed;
+								top: 85px;
+								right:7vw;
+								width: 360px;
+								height: 400px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+						}
+
+						div.wishlist div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 55px;
+								right: 2vw;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: fixed;
+								top: 85px;
+								right: 2vw;
+								width: 360px;
+								height: 400px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+						}
+
+						div.search div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 54px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: fixed;
+								top: 85px;
+								right: 2vw;
+								width: 360px;
+								height: 50px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+
+						}
+
+						div.account div.toolTip{
+							.tip{
+								display: none;
+								width: 0px;
+								height: 0px;
+								position: absolute;
+								top: 54px;
+								left: 15px;
+								border-bottom: 10px solid @highlightColor;
+								border-left: 10px solid transparent;
+								border-right: 10px solid transparent;
+
+							}
+
+							.tipBox{
+								z-index: 1001;
+								display: none;
+								position: fixed;
+								top: 85px;
+								right: 1vw;
+								width: 250px;
+								height: 250px;
+								background-color: lighten(@backgroundColor,15%);
+								box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+								border-top: 4px solid @highlightColor;
+							}
+
+						}
+
+						div.more{
+							display: inline-block;
+							position: absolute;
+							top: -6px;
+							left: 13px;
+							display: inline-block;
+							width: 40px;
+							height: 40px;
+							background-color: rebeccapurple;
+							border: 1px solid transparent;
+							border-radius: 50%;
+							color: white;
+							box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+						}
+					}
+					li.more{
+						color: white;
+						padding-left: 30px;
+					}
+					li:hover{
+						color: white;
+						div.circle{
+							background-color: @highlightColor;
+							transition: width 0.1s ease,height 0.1s ease;
+							width: 50px;
+							height: 50px;
+							box-shadow: -2px 0px 6px rgba(0,0,0, 0.3);
+
+							div.toolTip{
+							.tip{
+								display: block;
+							}
+
+							.tipBox{
+								display: block;
+							}
+						}
+						}
+					}
+				}
+			}
+
+			.sm-navPannel{
+				display: none;
+				position: absolute;
+				margin-top: 90px;
+				left: 0;
+				width: 100%;
+				height: 300px;
+
+				.pannelWrapper{
+					padding-left: 10px;
+					padding-right: 10px;
+					height: 100%;
+
+					.sidePannel{
+						width: 160px;
+						padding-left: 10px;
+						border-right: 2px solid @highlightColor;
+						height: 95%;
+						position: absolute;
+						top: 0;
+
+						ul{
+							font-family: @baseFont;
+							font-size: 1.2em;
+							margin-top: 25%;
+							position: relative;
+
+							.listOuter{
+								div.data{
+									position: absolute;
+									top:-20%;
+									left: 148px;
+									width: 80.5vw;
+									min-width: 570px;
+									height: 144%;
+									display: none;
+								}
+
+								li{
+									padding-top: 8px;
+									padding-bottom: 8px;
+									padding-left: 8px;
+									padding-right: 8px;
+									display: inline-block;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

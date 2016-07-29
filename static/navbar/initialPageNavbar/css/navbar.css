@@ -1,0 +1,62 @@
+.navBar{
+	position: absolute;
+	bottom:0vh;
+	width: 100vw;
+	height: 15%;
+	background-color: #D2D2D2;
+}
+ 
+.logo.hidden{
+	display: hidden!important;
+	height: 100%;
+}
+
+.row{
+	height: 100%;
+}
+
+.logo h1{
+	margin: 0;
+	font-size: 3em;
+	text-align: center;
+	font-family:  font-family: 'Oxygen', sans-serif;
+}
+
+.nav{
+	bottom: 0vh;
+	height: 100%;
+	width: 70%;
+}
+.searchDock{
+	height: 100%;
+	width: 30%;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+
+.nav a{
+	text-decoration: none;
+	color: #908F8F;
+}
+ 
+.nav ul{
+	margin-top: 10px;
+	width: 100%;
+	font-size: 1.4em;
+	position: absolute;
+	bottom: 2vh;
+	padding-left: 2vw;
+}
+
+.nav ul li{
+	display: inline;
+	cursor: pointer;
+	margin-right: 2vw;
+}
+
+.nav ul li a:hover{
+	border-bottom: 2px solid #049372;
+	color: #049372;
+	
+}

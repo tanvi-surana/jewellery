@@ -1,0 +1,71 @@
+@backgroundColor:#D2D2D2;
+@navFontColor:#908F8F;
+@highlightColor:#30aadc;
+@highlightColor:#08ECFF;
+@baseFont:'Oxygen', sans-serif;
+
+body{
+	background-color: lighten(@backgroundColor,15%);
+}
+
+.page{
+	.mainContent{
+		margin-top: 85px;
+		transition: margin-top 1s ease;
+		padding-top: 100px;
+		.wrapper{
+			width: 100vw;
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			
+			.filterForm{
+				width: 300px;
+				height: 100vh;
+			}
+			.productPannel{
+				width: 80%;
+				.products{
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+					.product{
+						width: 280px;
+						height: 380px;
+						background-color: lighten(@backgroundColor,10%);
+						border: 2px solid transparent;
+						border-radius: 6px;
+
+						.image{
+							margin-top: 5%;
+							margin-right: 5%;
+							margin-left: 5%;
+							width: 90%;
+							height: 80%;
+							background-color: white;
+						}
+						h2{
+							font-family: @baseFont;
+							color: @navFontColor;
+							font-size: 1.5em;
+							text-align: center;
+							margin-top: 20px;
+						}
+					}
+					
+					.product:hover{
+						transition: transform 0.5s ease;
+						transform: scale(1.03);
+						transition: box-shadow 0.5s ease;
+						box-shadow: -2px 3px 6px rgba(0,0,0, 0.3);
+					}
+				}
+			}
+		}
+	}
+}
+.rough{
+	width: 100vw;
+	height: 300vh;
+}

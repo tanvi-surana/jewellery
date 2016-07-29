@@ -1,0 +1,76 @@
+@backgroundColor:#D2D2D2;
+@highlightColor:#30aadc;
+@highlightColor:#08ECFF;
+@baseFont:'Oxygen', sans-serif;
+
+body{
+	margin: 0;
+	font-family: @baseFont;
+}
+
+div.viewPort{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	div.superCard{
+		width: 100%;
+		height: 85%;
+		position: absolute;
+		
+		div.card{
+			background-color: black;
+			width: 50%;
+			height: 100%;
+			box-shadow: -2px 0px 6px rgba(0,0,0, 0.4);
+			position: absolute;
+			top: 0;
+			left:0;
+			border-right: 3px solid @highlightColor;
+			
+			div.back{
+				font-size: 60px;
+				color:black;
+				position: absolute;
+				top:1vw;
+				left: 1vw;
+				opacity: 0;
+			}
+		}
+		
+		div.cardData{
+			background-color: @backgroundColor;
+			width: 50%;
+			height:	100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	
+	.generate-cards(@n,@i:0) when (@i < @n){
+			@j:@i+1;
+			div.superCard@{j}{
+				top:0;
+				left: ((@i *100%) /@n);
+				z-index: @i;
+				
+				div.card@{j}{
+					background-color:darken(@backgroundColor, ((@i)*5%+5%));
+				}
+			}
+			.generate-cards(@n,(@i+1))
+		}
+		.generate-cards(5);
+}
+
+.bottomRibbon{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 5px;
+	background-color: @highlightColor;
+}

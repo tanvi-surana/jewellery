@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<head>
+	<link rel="stylesheet/less" type="text/css" href={% static "navbar/navbar/css/navbar.less" %}>
+</head>
+
+<!-- Never Start A div with class navBar -->
+
+<div class="navBar">
+	<div class="col-xs-12 navRibbon">
+	</div>
+	<div class="wrapper">
+		<div class="logo"> 
+		  <a href="http://127.0.0.1:8000/jwellery/"></a>
+		</div>
+
+		<div class="nav">
+			<ul class="list-unstyled {{page}}">
+				<div class="list jwellery">
+					<li class="jwellery">Jewellery</li>
+					<div class="data jwellery">
+					  <div>
+					  	 <img src="" alt="abcd"> 
+					  </div>	
+						 	 
+					</div>
+				</div>
+				<div class="list collections">
+					<li class="collections">Collections</li>
+					<div class="data collections"></div>
+				</div>
+				<div class="list solitaires">
+					<li class="solitaires">Gemstones</li>
+					<div class="data solitaires"></div>
+				</div>
+				<!-- <div class="list goldCoins">
+					<li class="goldCoins">Gold Coins</li>
+					<div class="data goldCoins"></div>
+				</div> -->
+				<!-- <div class="list gifts">
+					<li class="gifts">Gifts</li>
+					<div class="data gifts"></div>
+				</div> -->
+				<div class="list customize">
+					<li>
+					   Customize
+					</li>
+				</div>
+				<div class="list aboutus">
+					<li>
+					   <a href="http://127.0.0.1:8000/about-us">About Us</a>
+					</li>
+				</div>
+				<div class="list contactus">
+					<li>
+					   <a href="http://127.0.0.1:8000/contact-us">Contact Us</a>
+					</li>
+				</div>
+			</ul>
+		</div>
+
+		<div class="dock">
+			<ul class="list-unstyled">
+				<li>
+					<div class="cart circle">
+						<div class="supp"></div>
+						<div class="toolTip cart">
+							<div class="tip">
+							</div>
+							<div class="tipBox">
+							</div>
+						</div>
+					</div>
+					<i class="fa fa-shopping-cart"></i>
+				</li>
+				<li>
+					<div class="wishlist circle">
+						<div class="supp"></div>
+						<div class="toolTip wishlist">
+							<div class="tip">
+							</div>
+							<div class="tipBox">
+							</div>
+						</div>
+					</div>
+					<i class="fa fa-heart-o"></i>
+				</li>
+				<li>
+					<div class="search circle">
+						<div class="supp"></div>
+						<div class="toolTip search">
+							<div class="tip">
+							</div>
+							<div class="tipBox">
+							</div>
+						</div>
+					</div>
+					<i class="fa fa-search"></i>
+				</li>
+				<li>
+					<div class="account circle">
+						<div class="supp"></div>
+						<div class="toolTip account">
+							<div class="tip">
+							</div>
+							<div class="tipBox">
+							</div>
+						</div>
+					</div>
+					<i class="fa fa-user"></i>
+
+				</li>
+				<li class="more">
+					<div class="more">
+					</div>
+					<i class="fa fa-ellipsis-v"></i>
+				</li>
+			</ul>
+		</div>
+
+		<div class="sm-navPannel">
+			<div class="pannelWrapper">
+				<div class="sidePannel">
+					<ul class="list-unstyled {{page}}">
+						<div class="listOuter jwellery">
+							<li class="jwellwey">Jewellery</li>
+							<div class="data jwellery">Jewellery</div>
+						</div>
+						<div class="listOuter collections">
+							<li class="collections">Collections</li>
+							<div class="data collections">Collections</div>
+						</div>
+						<div class="listOuter solitaires">
+							<li class="solitaires">Solitares</li>
+							<div class="data solitaires">Solitares</div>
+						</div>
+						<div class="listOuter goldCoins">
+							<li class="goldCoins">Gemstones</li>
+							<div class="data goldCoins">Gemstones</div>
+						</div>
+						<!-- <div>
+							<li class="aboutus">
+								<a href=""></a>
+							</li>
+						</div>
+						<div>
+							<li class="">
+								<a href=""></a>
+							</li>
+						</div> -->
+						<!-- <div class="listOuter gifts">
+							<li class="gifts">Gifts</li>
+							<div class="data gifts">Gifts</div>
+						</div> -->
+					</ul>
+				</div>
+				<div class="pannelContent">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src={% static "navbar/navbar/js/loginFormLoad.js" %}></script>
+<script type="text/javascript" src={% static "navbar/navbar/js/navbar.js" %}></script>

@@ -1,0 +1,85 @@
+@backgroundColor:#D2D2D2;
+@navFontColor:#908F8F;
+@highlightColor:#30aadc;
+@highlightColor:#08ECFF;
+@baseFont:'Oxygen', sans-serif;
+
+@media (min-width:768px)
+{
+	.navBar{
+		background-color: @backgroundColor;
+		position: absolute;
+		padding: 0;
+		bottom: 0;
+		width: 100%;
+		height: 15%;
+		@viewWidth:100%;
+		.nav{
+			width: @viewWidth*0.7;
+			height: 100%;
+			font-family: @baseFont;
+			position: absolute;
+			bottom: 0;
+
+
+			ul{
+				margin-top: 10px;
+				width: 100%;
+				font-size: 1.4em;
+				position: absolute;
+				bottom: 4vh;
+				left: 2vw;
+				margin: 0;
+				li{
+					display: inline;
+					padding-right: 2vw;
+
+					a{
+						text-decoration: none;
+						color: @navFontColor;
+						width: 110%;
+					}
+
+					a:hover{
+						color: darken(@navFontColor,20%);
+						border-bottom: 3px solid @highlightColor;
+					}
+				}
+			}
+		}
+
+		.searchDock{
+			width: @viewWidth*0.3;
+			position: absolute;
+			height: 100%;
+			right: 0;
+
+			.dock{
+				width: 100%;
+				height: 100%;
+
+				ul{
+					font-size: 1.2em;
+					position: absolute;
+					bottom: 3vh;
+					right: 2vw;
+
+					li{
+
+						display: inline;
+
+						a{
+						text-decoration: none;
+						color: @navFontColor;
+						}
+
+						a:hover{
+							color: darken(@navFontColor,20%);
+							border-bottom: 2px solid @highlightColor;
+						}
+					}
+				}
+			}
+		}
+	}
+}
